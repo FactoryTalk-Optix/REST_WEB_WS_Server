@@ -1,0 +1,68 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: RATC_WEBSVR
+  Id: g=6b200460c664b8d0806ead01a78e4359
+  Type: NetLogic
+  Children:
+  - Name: ServerRunning
+    Id: g=5d312fdeb9c1047b94d120934e4fb73c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: ClientCount
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: URL
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "192.168.56.1"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "48080"
+  - Name: CSVDataPath
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "C:\\tmp\\iTRAKData"
+  - Name: SaveToCSV
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Class: Method
+    Name: sendDataBytes
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"data","DataType":{"Id":3},"ValueRank":1,"ArrayDimensions":[0],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"channel","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: sendDataMsg
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"msg","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"channel","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: startServer
+  - Class: Method
+    Name: stopServer
+  - Name: PublicFolderWeb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: StartAtRuntimeStart
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
