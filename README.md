@@ -1,7 +1,7 @@
 # REST-WEB-WS_Server
-Sample of hosting a REST, WEB and Web Socket Server in Optix
+Sample of hosting a REST, WEB, and Web Socket Server in Optix
 
-All thanks, kudos and credit to Andreas Probst
+All thanks, kudos, and credit to Andreas Probst
 
 ## Description
 
@@ -11,7 +11,7 @@ All thanks, kudos and credit to Andreas Probst
 - Currently, no TSL is supported, but maybe in the future with the same technique that MQTT is using
 - Provided as sample code
 - When you use a REST Server, you would need to adjust the C# code to deal with all the different resources (Endpoints) of the server. It would be hard to have something “generic” on that part.
-- If used as Web Socket, there is a variable “Message” which is updated automatically.
+- If used as a Web Socket, there is a variable “Message” which is updated automatically.
 
 ## Sample Project setup
 
@@ -35,9 +35,9 @@ All thanks, kudos and credit to Andreas Probst
 - `Port`: The port used for the listener
 - `CSVDataPath`: Not generic, just for a specific use-case
 - `SaveToCSV`: Not generic, just for a specific use-case
-- `PublicFolderWeb`: If used as Web Server, specifies the folder with the files
+- `PublicFolderWeb`: If used as a Web Server, specifies the folder with the files
 - `StartAtRuntimeStart`: Set to true to start automatically
-- `Message`: When used as Web Socket, the message which is received
+- `Message`: When used as a Web Socket, the message that is received
 
 ### Methods
 
@@ -57,9 +57,9 @@ Adjust the code to support requested functions for REST
 - Go to the event “app” where you will find the methods for the REST server.
 - Review the event argument “e” and take a look at 2 important properties:
     - `e.req.HttpMethod`: Here is the selector of the method, like GET, POST, PUT…
-    - `e.path`: Is the path what is called. If the client will send a GET command to `http://localhost/products/123abc` then the path will be `/products/123abc`
-- Another property would be the `e.req.QueryString` property. This gives you a list of the URL parameters if there any. In general, just take a look at the .r.req for the requested information.
+    - `e.path`: Is the path what is called. If the client sends a GET command to `http://localhost/products/123abc` then the path will be `/products/123abc`
+- Another property would be the `e.req.QueryString` property. This gives you a list of the URL parameters if there are any. In general, just take a look at the .r.req for the requested information.
 - With those 2 you can easily change/extend/adjust all the supported commands in your application. 
 - Have a look at the PUT example on how to access the body of the request.
-- If you like to incle any content in the response, you can do so by setting the “e.res.setContent()” function.
+- If you like to include any content in the response, you can do so by setting the “e.res.setContent()” function.
 - There are many samples included in the code.
